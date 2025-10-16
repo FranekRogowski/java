@@ -1,0 +1,36 @@
+<html>
+ <body>
+ <textarea cols="120" rows="40">
+ <html> 
+ <body> 
+  <div style="color:green;font-size:52px;"> 
+    <script language="JavaScript"> 
+        
+var D1_rog = prompt("podaj pierwszy dzien (D1_rog) =", "");
+var G1_rog = prompt("podaj pierwsza odzine (G1_rog) =", "");
+var D2_rog = prompt("podaj drugi dzien (D2_rog) =", "");
+var G2_rog = prompt("podaj druga godzine (G2_rog) =", "");
+
+var d1 = parseFloat(D1_rog);
+var g1 = parseFloat(G1_rog);
+var d2 = parseFloat(D2_rog);
+var g2 = parseFloat(G2_rog);
+
+var sek1 = (d1 * 24 + g1) * 3600;
+var sek2 = (d2 * 24 + g2) * 3600;
+var sekund = Math.abs(sek1 - sek2);
+
+document.write("ilosc sekund miedzy dniem " + d1 + " godzina " + g1 +
+" a dniem" + d2 + " godzina " + g2 + " = " + sekund + " sekund<br>");
+
+function okno_zamknij_rog() { 
+  window.close();
+}
+    </script> 
+  </div> 
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_rog()"/> 
+ </body> 
+</html>
+ </textarea>
+ </body>
+</html>
