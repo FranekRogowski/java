@@ -1,19 +1,22 @@
-<!DOCTYPE html>
- <head>
- <title> proste obliczenia</title>
- <meta charset="utf-8">
- </head>
-<body>
-<div style="color:green;font-size:52px;">
- <script language="JavaScript">
-var D1_rog=prompt("D1=","");
-var D2_rog=prompt("D2=","");
-var suma;
- var a=parseFloat(D1_rog);
- var b=parseFloat(D1_rog);
- suma=a+b;
- document.write("suma="+a+" + "+b+" = "+suma+"<br>");
- </script>
-</div>
-</body>
-</html>
+        <html> 
+         <body> 
+          <div style="color:green;font-size:50px;"> 
+            <script language="JavaScript"> 
+// Franek Rogowski  3G   16.10.2025 
+// Zadanie 11  
+              var D1_Rog=prompt("Data1=",""); 
+              var D2_Rog=prompt("Data2=",""); 
+              var sekund; 
+              var a=parseFloat(D1_Rog); 
+              var b=parseFloat(D2_Rog); 
+                sekund=(a-b)*24*60*60; 
+              document.write("Ilość sekund między dniami "+a+" i "+b+" = "+sekund+"<br>"); 
+                function okno_zamknij_rogo() 
+                 { 
+                   window.close() 
+                 } 
+              </script> 
+            </div> 
+          <input type="button" value="zamknij okno" onclick="okno_zamknij_rogo()"/> 
+        </body> 
+       </html> 
