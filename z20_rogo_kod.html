@@ -1,0 +1,76 @@
+<html>
+ <body>
+ <textarea cols="90" rows="70">
+
+<html>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+input {
+    margin: 5px;
+    width: 80px;
+}
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+}
+</style>
+</head>
+<body>
+
+<form>
+    <p>Wczytaj punkty A, B, C:</p>
+    A: xA <input type="number" id="xa_rog">  yA <input type="number" id="ya_rog"><br>
+    B: xB <input type="number" id="xb_rog">  yB <input type="number" id="yb_rog"><br>
+    C: xC <input type="number" id="xc_rog">  yC <input type="number" id="yc_rog"><br><br>
+
+    <button type="button" onclick="oblicz()">Oblicz długości boków</button>
+</form>
+
+<h3>Wyniki:</h3>
+<div id="wynik"></div>
+
+<script>
+function AB_rog() {
+    let xa = parseFloat(document.getElementById('xa_rog').value);
+    let ya = parseFloat(document.getElementById('ya_rog').value);
+    let xb = parseFloat(document.getElementById('xb_rog').value);
+    let yb = parseFloat(document.getElementById('yb_rog').value);
+    return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+}
+
+function BC_rog() {
+    let xb = parseFloat(document.getElementById('xb_rog').value);
+    let yb = parseFloat(document.getElementById('yb_rog').value);
+    let xc = parseFloat(document.getElementById('xc_rog').value);
+    let yc = parseFloat(document.getElementById('yc_rog').value);
+    return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+}
+
+function AC_rog() {
+    let xa = parseFloat(document.getElementById('xa_rog').value);
+    let ya = parseFloat(document.getElementById('ya_rog').value);
+    let xc = parseFloat(document.getElementById('xc_rog').value);
+    let yc = parseFloat(document.getElementById('yc_rog').value);
+    return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+}
+
+function oblicz() {
+    let ab = AB_rog().toFixed(3);
+    let bc = BC_rog().toFixed(3);
+    let ac = AC_rog().toFixed(3);
+
+    document.getElementById('wynik').innerHTML =
+        "AB = " + ab + "<br>" +
+        "BC = " + bc + "<br>" +
+        "AC = " + ac;
+}
+</script>
+
+</body>
+</html>
+      </textarea>
+</body>
+</html>
