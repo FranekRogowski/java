@@ -1,0 +1,57 @@
+<html>
+ <body>
+ <textarea cols="90" rows="70">
+<html>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+input {
+    margin: 5px;
+    width: 80px;
+}
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+}
+</style>
+<body>
+<form>
+    <p>Oblicz odległości od drabiny i kąta</p>
+    D: <input type="number" id="D_rog"> m<br>
+    X: <input type="number" id="X_rog"> m<br>
+    <button type="button" onclick="oblicz_drabine()">Oblicz</button>
+</form>
+
+<h3>Wyniki:</h3>
+  Drabina: <input type="text" id="dlugosc_rog" readonly> m<br>
+  Alfa: <input type="text" id="kat_rog" readonly>°
+
+<script>
+function dlugosc_drabiny(D, X) {
+    return Math.sqrt(Math.pow(D, 2) + Math.pow(X, 2));
+}
+
+function kat_drabiny(D, X) {
+    let rad = Math.atan(D / X); 
+    return rad * (180 / Math.PI); 
+}
+
+function oblicz_drabine() {
+    let D = parseFloat(document.getElementById('D_rog').value);
+    let X = parseFloat(document.getElementById('X_rog').value);
+
+    let dlugosc = dlugosc_drabiny(D, X).toFixed(2);
+    let kat = kat_drabiny(D, X).toFixed(2);
+
+    document.getElementById('dlugosc_rog').value = dlugosc;
+    document.getElementById('kat_rog').value = kat;
+}
+</script>
+
+</body>
+</html>
+      </textarea>
+</body>
+</html>
