@@ -1,0 +1,56 @@
+<html>
+ <body>
+ <textarea cols="90" rows="70">
+<html>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+input {
+    margin: 5px;
+    width: 80px;
+}
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+}
+</style>
+<body>
+
+<form>
+    <p>Wczytaj wymiary prostokąta:</p>
+    a: <input type="number" id="a_dana_rog">  b: <input type="number" id="b_dana_rog"><br>
+    <button type="button" onclick="oblicz()">Oblicz pole i obwód</button>
+</form>
+
+<h3>Wyniki:</h3>
+Pole: <input type="text" id="wyprowadz_pole_rog" readonly><br>
+Obwód: <input type="text" id="wyprowadz_obwod_rog" readonly>
+
+<script>
+function Pole_rog(a_rog, b_rog) {
+    return a_rog * b_rog;
+}
+
+function obwod_rog(a_rog, b_rog) {
+    return 2 * (a_rog + b_rog);
+}
+
+function oblicz() {
+    let a_rog = parseFloat(document.getElementById('a_dana_rog').value);
+    let b_rog = parseFloat(document.getElementById('b_dana_rog').value);
+
+    let pole = Pole_rog(a_rog, b_rog);
+    let obw = obwod_rog(a_rog, b_rog);
+
+    document.getElementById('wyprowadz_pole_rog').value = pole;
+    document.getElementById('wyprowadz_obwod_rog').value = obw;
+}
+</script>
+
+</body>
+</html>
+      </textarea>
+</body>
+</html>
