@@ -1,0 +1,27 @@
+<html>
+<body>
+    <div style="color:red; font-size:30px;">
+
+    <script language="JavaScript">
+        var liczba1=prompt("liczba1=","");
+        var liczba2=prompt("liczba2=","");
+        var x1_rog=parseFloat(liczba1);
+        var x2_rog=parseFloat(liczba2);
+
+        document.write("X1="+x1_rog+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X2="+x2_rog+"<br>");
+
+        var y1_rog=3*Math.pow(x1_rog,5/7);
+        document.write("y1="+y1_rog.toFixed(2)+"<br>");
+
+        rad_x1_rog=(x1_rog*Math.PI)/180;
+        var y2_rog=2*Math.cos(rad_x1_rog)+3*Math.sin(rad_x1_rog);
+        document.write("y2="+y2_rog.toFixed(2)+"<br>");
+
+        akuku=Math.pow(x1_rog,5)+2*Math.pow(x2_rog,4);
+        var y3_rog=Math.pow(akuku,1/3)*Math.abs(x1_rog-x2_rog);
+        document.write("y3="+y3_rog.toFixed(2)+"<br>");
+    </script>
+
+    </div>
+</body>
+</html>
