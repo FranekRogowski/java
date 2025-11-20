@@ -1,51 +1,69 @@
+<!DOCTYPE html>
 <html>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-input {
-    margin: 5px;
-    width: 80px;
-}
-button {
-    margin-top: 10px;
-    padding: 8px 15px;
-}
-</style>
+<head>
+    <title>Drabina i kąt</title>
+    <script language="JavaScript">
+        function Drabina(d, x) {
+            c = parseFloat(x);
+            d = parseFloat(d);
+            Drabina_w = Math.sqrt((c * c) + (d * d));
+            document.getElementsByName('drab')[0].value = Drabina_w.toFixed(2);
+            alert("Drabina=" + Drabina_w.toFixed(2) + " cm");
+            pokaz1.innerHTML = "Drabina=" + Drabina_w.toFixed(2) + " cm" + "<br>";
+        }
+
+        function Alfa(d, x) {
+            c = parseFloat(x);
+            d = parseFloat(d);
+            sinA = c / Math.sqrt((c * c) + (d * d));
+            var aRad = Math.asin(sinA);
+            var aDeg = aRad * (180 / Math.PI);
+            document.getElementsByName('alfa')[0].value = aDeg.toFixed(2);
+            alert("Alfa=" + aDeg.toFixed(2));
+            pokaz2.innerHTML = "Alfa=" + aDeg.toFixed(2) + "<br>";
+        }
+
+        function okno_zamknij_rog() {
+            window.close();
+        }
+    </script>
+</head>
 <body>
-<form>
-    <p>Oblicz odległości od drabiny i kąta</p>
-    D: <input type="number" id="D_rog"> m<br>
-    X: <input type="number" id="X_rog"> m<br>
-    <button type="button" onclick="oblicz_drabine()">Oblicz</button>
-</form>
 
-<h3>Wyniki:</h3>
-  Drabina: <input type="text" id="dlugosc_rog" readonly> m<br>
-  Alfa: <input type="text" id="kat_rog" readonly>°
+    <h2>Obliczanie Drabina i kąt</h2>
+    <br>
+    <hr>
 
-<script>
-function dlugosc_drabiny(D, X) {
-    return Math.sqrt(Math.pow(D, 2) + Math.pow(X, 2));
-}
+    <form name="formularz" action="" onsubmit="Drabina(this.bok_d.value, this.bok_x.value); Alfa(this.bok_d.value, this.bok_x.value); return false">
 
-function kat_drabiny(D, X) {
-    let rad = Math.atan(D / X); 
-    return rad * (180 / Math.PI); 
-}
+        <p>Podaj D:</p>
+        <input size="6" name="bok_d" type="text" value="">
+        <p>Podaj X:</p>
+        <input size="6" name="bok_x" type="text" value="">
+        <br>
+        <hr>
 
-function oblicz_drabine() {
-    let D = parseFloat(document.getElementById('D_rog').value);
-    let X = parseFloat(document.getElementById('X_rog').value);
+        <input type="submit" value="Oblicz">
+        <br>
+        <hr>
 
-    let dlugosc = dlugosc_drabiny(D, X).toFixed(2);
-    let kat = kat_drabiny(D, X).toFixed(2);
+        <p>Drabina:</p>
+        <input size="6" name="drab" type="text" readonly>
+        <p>Alfa:</p>
+        <input size="6" name="alfa" type="text" readonly>
 
-    document.getElementById('dlugosc_rog').value = dlugosc;
-    document.getElementById('kat_rog').value = kat;
-}
-</script>
+    </form>
+
+    <table>
+        <tr>
+            <td id="pokaz1"></td>
+        </tr>
+        <tr>
+            <td id="pokaz2"></td>
+        </tr>
+    </table>
+
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_rog()">
 
 </body>
 </html>
