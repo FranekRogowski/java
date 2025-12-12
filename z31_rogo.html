@@ -1,0 +1,33 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ var wazon = {
+kolor: 'Czerwony',
+wielkość: 'Duży',
+kształt: 'Okrągły',
+wzorek: 'Kropkowany',
+pokaz: function ()
+{
+ document.write(this.kolor + ' ' + this.wielkość)
+ }
+}
+wazon.pokaz();
+wazon.cena=30;
+wazon.wypisz=function() {alert('Cena: ' + this.cena + 'zł')}
+wazon.wypisz();
+ </script>
+ </head>
+<body>
+<br>
+ Programowanie obiektowe. <br>
+ Obiekt to wazon<br>
+ Pola:<br>
+ kolor<br>
+ wielkość<br>
+ kształt<br>
+ wzorek<br>
+ metoda: pokaz<br>
+ nowe pole to cena <br>
+ nowa metoda to wypisz();<br>
+</body>
+</html>
