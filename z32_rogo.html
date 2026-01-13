@@ -1,0 +1,52 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function Wazon(material_w, wysokosc_w, kolor_w, cena_w) {
+            this.material = material_w;
+            this.wysokosc = wysokosc_w;
+            this.kolor = kolor_w;
+            this.cena = cena_w;
+        }
+
+        
+        Wazon.prototype.wypisz = function() {
+            document.write("Metoda wypisz(): " + this.material + " " + this.wysokosc + " " + this.kolor + " " + this.cena + "<br>");
+        };
+
+      
+        var wazon1 = new Wazon("Ceramika", "30cm", "Niebieski", "50 PLN");
+        var wazon2 = new Wazon("Szkło", "25cm", "Przezroczysty", "80 PLN");
+        var wazon3 = new Wazon("Glina", "40cm", "Brązowy", "30 PLN");
+
+        
+    
+        document.write("<h3>Dostęp do pól (właściwości):</h3>");
+        document.write("Wazon 1: " + wazon1.material + " " + wazon1.wysokosc + " " + wazon1.kolor + " " + wazon1.cena + "<br>");
+        document.write("Wazon 2: " + wazon2.material + " " + wazon2.wysokosc + " " + wazon2.kolor + " " + wazon2.cena + "<br>");
+        document.write("Wazon 3: " + wazon3.material + " " + wazon3.wysokosc + " " + wazon3.kolor + " " + wazon3.cena + "<br>");
+
+      
+        document.write("<h3>Wywołanie metody wypisz() z prototypu:</h3>");
+        wazon1.wypisz();
+        wazon2.wypisz();
+        wazon3.wypisz();
+
+     
+        wazon1.kolekcja = "Zima 2024";
+        document.write("Dodano nowe pole 'kolekcja' do wazon1: " + wazon1.kolekcja + "<br>");
+
+      
+        wazon1.Wazon_pokaz_Rogowski = function() {
+            document.write("Działanie metody Wazon_pokaz_Rogowski -> Kolekcja: " + this.kolekcja);
+        }
+
+       
+        wazon1.Wazon_pokaz_Rogowski();
+
+    </script>
+</head>
+<body>
+</body>
+</html>
