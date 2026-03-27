@@ -1,0 +1,26 @@
+<!DOCTYPE html>  
+<html lang="pl-PL">  
+ <meta charset="utf-8">
+<title> z40 ROGO </title>
+<body> 
+ <div style="color:red;font-size:50px;"> 
+    <script language="JavaScript"> 
+  var x=prompt("podaj argument x=",""); 
+               var x_rog=parseFloat(x); 
+
+
+    document.write("Wykonał Franek Rogowski: x="+x_rog+"<br>");     
+ 
+                 function f_rog(x_rog) { 
+                            if(x_rog>=1) {return 1;} 
+                            if((x_rog=>-2)&&(x_rog<1)) {return x_rog*x_rog;} 
+                            if(x_rog<-2) {return 4;} 
+                  } 
+ 
+               document.write("f="+f_rog(x_rog)+"<br>"); 
+ 
+           </script> 
+ </div> 
+ </body> 
+</html> 
+<!--  Rogowski Z40_JS  -->
