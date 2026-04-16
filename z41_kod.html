@@ -1,0 +1,126 @@
+<html>
+	<title>Rogowski Z37_kod</title> 
+<body>
+<textarea cols="250" rows="130">
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head> 
+ <title>Zadanie JavaScript</title> 
+ <meta charset="utf-8"> 
+ <style> 
+  h1 { text-transform: uppercase; } 
+ </style> 
+</head> 
+<body> 
+ 
+ <h1>Proste działania</h1> 
+ <label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a"> 
+ <br><br> 
+ <label for="b">Podaj drugą liczbę:</label> <input type="number" id="b"> 
+ <br><br> 
+ 
+ <input type="button" value="DODAWANIE" onclick="suma_rog()"> 
+ <input type="button" value="ODEJMOWANIE" onclick="roznica_rog()"> 
+ <input type="button" value="MNOŻENIE" onclick="iloczyn_rog()"> 
+ <input type="button" value="DZIELENIE" onclick="iloraz_rog()"> 
+ <input type="button" value="TEORIA-Rogowski" onclick="teoria_rog()"> 
+ 
+ <div id="wynik" style="margin-top:20px;"></div> 
+ 
+ <script> 
+ 
+function teoria_rog() 
+{ 
+document.write("<font color=green size=4>pierwsza linia teorii</font><br>");
+document.write("<font color=red size=4>&lt;label for=&quot;a&quot;&gt;Podaj pierwszą liczbę:&lt;/label&gt;</font><br>");
+document.write("<font color=green size=4>wytłumaczenie:</font><br>");
+document.write("<font color=red size=4>tworzy etykietę pola formularza</font><br>");
+}  
+   
+function suma_rog() 
+{ 
+ var a = document.getElementById("a").value; 
+ var b = document.getElementById("b").value; 
+ 
+ if (a == "" || b == "") 
+ { 
+ document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+ } 
+ else 
+ { 
+  a = parseFloat(a); 
+  b = parseFloat(b); 
+  var suma_rog = a + b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma_rog.toFixed(2); 
+ } 
+} 
+ 
+function roznica_rog() 
+{ 
+ var a = document.getElementById("a").value; 
+ var b = document.getElementById("b").value; 
+ 
+ if (a == "" || b == "") 
+ { 
+ document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+ } 
+ else 
+ { 
+  a = parseFloat(a); 
+  b = parseFloat(b); 
+  var roznica_rog = a - b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica_rog.toFixed(2); 
+ } 
+}   
+ 
+function iloczyn_rog() 
+{ 
+ var a = document.getElementById("a").value; 
+ var b = document.getElementById("b").value; 
+ 
+ if (a == "" || b == "") 
+ { 
+ document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+ } 
+ else 
+ { 
+  a = parseFloat(a); 
+  b = parseFloat(b); 
+  var iloczyn_rog = a * b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn_rog.toFixed(2); 
+ } 
+}   
+ 
+function iloraz_rog() 
+{ 
+ var a = document.getElementById("a").value; 
+ var b = document.getElementById("b").value; 
+ 
+ if (a == "" || b == "") 
+ { 
+ document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+ } 
+ else 
+ { 
+  a = parseFloat(a); 
+  b = parseFloat(b); 
+ 
+  if (b == 0) 
+  { 
+   document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero."; 
+  } 
+  else 
+  {         
+   var iloraz_rog = a / b; 
+   document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz_rog.toFixed(2); 
+  } 
+ } 
+} 
+ 
+ </script> 
+</body> 
+</html>
+</textarea>
+</body>
+</html>
+<!--  Rogowski Z37_kod  --> 
