@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="pl-PL">
- <title>Rogowski Z35_JS</title>
- <body>
 <div style="color:red;font-size:50px;">
- <script language="JavaScript">
+<script>
 var x=prompt("podaj liczbę x=","");
- var a_dana_rog=parseFloat(x);
- document.write("czytana liczba x="+a_dana_rog+"<br>");
- if(a_dana_rog>0)
- {document.write("czytana liczba jest większa od 0"+"<br>");}
-  else(a_dana_rog==0)
- {document.write("czytana liczba jest równa 0"+"<br>");}
-    else(a_dana_rog<0)
- {document.write("czytana liczba jest mniejsza od 0"+"<br>");}
- </script>
+var a_dana_rog=parseFloat(x);
+
+document.write("czytana liczba x="+a_dana_rog+"<br>");
+
+if(a_dana_rog>0){
+document.write("czytana liczba jest większa od 0<br>");
+}
+else if(a_dana_rog==0){
+document.write("czytana liczba jest równa 0<br>");
+}
+else{
+document.write("czytana liczba jest mniejsza od 0");
+}
+</script>
 </div>
 </body>
 </html>
