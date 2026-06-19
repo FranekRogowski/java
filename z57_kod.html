@@ -1,0 +1,38 @@
+<html>
+<body>
+<textarea cols="90" rows="35">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title> Przykład użycia pętli </title>
+    <script language="JavaScript">
+        do {
+            l1_t_rog = parseFloat(prompt("podaj liczbe z zakresu <20;60>",""));
+            l2_t_rog = parseFloat(prompt("podaj liczbe z zakresu <20;60>",""));
+        } while (60 < l1_t_rog || l1_t_rog < 20 || (60 < l2_t_rog || l2_t_rog < 20));
+
+        pocz_rog = parseInt(prompt("Podaj wartość początrogą wielkości tekstu",""));
+        tekst_rog = prompt("podaj dowolny tekst","");
+
+        if (l1_t_rog < l2_t_rog){
+            for (var i=pocz_rog; i<=100; i+=5){
+                document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_rog+"<br></p>");
+            }
+        } else if (l2_t_rog < l1_t_rog){
+            for (var i=pocz_rog; i>=0; i-=5){
+                document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_rog+"<br></p>");;
+            }
+        } else if (l2_t_rog == l1_t_rog) {
+            document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_rog+"<br></p>");
+        }
+
+        document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_rog+"<br></p>");
+    </script>
+</head>
+<body>
+</body>
+</html>
+</textarea>
+</body>
+</html>
